@@ -52,6 +52,7 @@
                         <input type="date" id="tanggal" class="form-control form-control-sm w-100" required>
                         <input type="time" id="waktu" class="form-control form-control-sm w-100" required>
                     </div>
+                    
                     <label>Tempat Kegiatan</label>
                     <input type="text" id="tempat" class="form-control form-control-sm" placeholder="Contoh: Aula Depan" required>
 
@@ -150,12 +151,14 @@
         btn.innerText = "MENYIMPAN...";
 
         const data = {
+           // Di dalam function onSubmit, pastikan ID 'tempat' dipanggil sesuai ID di HTML
             tahapan: document.getElementById('tahapan').value,
             namaKegiatan: document.getElementById('namaKegiatan').value,
             jenisKegiatan: document.getElementById('jenisKegiatan').value,
             tanggal: document.getElementById('tanggal').value,
             waktu: document.getElementById('waktu').value,
-            tempat: document.getElementById('tempat').value,
+            tempat: document.getElementById('tempat').value, // Jika ID di HTML 'tempat', di sini harus 'tempat'
+    // ... data lainnya
             peserta: document.getElementById('peserta').value,
             pimpinan: document.getElementById('pimpinan').value,
             guruSenior: document.getElementById('guruSenior').value,
